@@ -21,6 +21,7 @@
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
+    pkgs.btop
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -68,6 +69,11 @@
   #
   home.sessionVariables = {
     # EDITOR = "emacs";
+  };
+
+  programs.neovim = {
+    enable = true;
+    viAlias = true;
   };
 
   # Let Home Manager install and manage itself.
